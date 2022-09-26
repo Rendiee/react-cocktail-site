@@ -1,6 +1,7 @@
 li {
+    font-size: larger;
     font-weight: 700;
-    margin: 0 50px;
+    margin: 0 40px;
 }
 
 ul {
@@ -37,5 +38,5 @@ a {
 
 .header-logo {
     width: auto;
-    height: 50px;
+    height: 80px;
 }

@@ -1,9 +1,11 @@
 import Header from "./component/Header/Header";
+import Hero from "./component/Hero/Hero";
 
 function App() {
   return (
     <div>
-      <Header title="Randy" />
+      <Header/>
+      <Hero />
     </div>
   );
 }

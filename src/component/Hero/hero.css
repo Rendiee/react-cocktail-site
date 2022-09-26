@@ -1,0 +1,50 @@
+.hero-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hero-title{
+    font-weight: 500;
+    font-size: 3vw;
+}
+
+.hero-text {
+    font-size: 1.5vw;
+    margin-top: 1.2vw;
+}
+
+.hero-cta {
+    all: unset;
+    background-color: #FFA1A1;
+    color: white;
+    border-radius: 8px;
+    padding: 5px 50px;
+    font-weight: 500;
+    font-size: 1.1vw;
+    margin-top: 2.5vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    cursor: pointer;
+}
+
+.hero-image {
+    width: auto;
+    height: 500px;
+    margin-top: 4vw;
+    margin-right: 11vw;
+}
+
+.hero-blob-img {
+    width: auto;
+    height: 670px;
+    position: absolute;
+    z-index: -1;
+    top: 14vh;
+    right: 28vh;
+}
+
+.hero-yellow-text {
+    color: #FFDC99;
+}
