@@ -1,7 +1,12 @@
 li {
-    display: inline;
     font-weight: 700;
     margin: 0 50px;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
 }
 
 nav {
@@ -21,15 +26,13 @@ a {
     padding: 5px 0 5px 8px;
     border: #D2D2D2 solid 1px;
     border-radius: 8px;
+    display: flex;
+    align-items: center;
 }
 
 .header-search-input {
     all: unset;
     margin-left: 10px;
-}
-
-.header-search-icon {
-    padding-top: 5px;
 }
 
 .header-logo {

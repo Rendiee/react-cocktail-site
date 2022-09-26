@@ -14,7 +14,7 @@ class Header extends React.Component {
                         <li><a href='#'>Histoire</a></li>
                         <li><a href='#'>Cocktails</a></li>
                         <li className='header-search'>
-                            <img className='header-search-icon' src={search} alt='search icon' />
+                            <img src={search} alt='search icon' />
                             <input className='header-search-input' type="text" placeholder="Chercher ..." />
                         </li>
                     </ul>
