@@ -16,9 +16,9 @@ class Hero extends React.Component {
                             <button className='hero-cta'>Découvrir</button>
                         </div>
                     </div>
-                    <div>
+                    <div className='test'>
                         <img className='hero-image' src={cocktail} alt='cocktail illustration'/>
-                        <img className='hero-blob-img' src={blob} alt='blob' />
+                        {/* <img className='hero-blob-img' src={blob} alt='blob' /> */}
                     </div>
                 </div>
             </section>

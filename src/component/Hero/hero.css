@@ -38,11 +38,24 @@
 
 .hero-blob-img {
     width: auto;
-    height: 670px;
+    height: 36vw;
     position: absolute;
     z-index: -1;
     top: 14vh;
     right: 28vh;
+}
+
+.test::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0vh;
+    right: 0vh;
+    width: 80vw;
+    aspect-ratio: 1;
+    background-image: url('../../assets/hero-blob.png');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .hero-yellow-text {
