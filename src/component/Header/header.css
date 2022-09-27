@@ -1,23 +1,23 @@
-li {
-    font-size: larger;
-    font-weight: 700;
-    margin: 0 40px;
-}
-
-ul {
-    display: flex;
-    align-items: center;
-    list-style: none;
-}
-
-nav {
+.navlist {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 20px 0;
 }
 
-a {
+.navlist li {
+    font-size: larger;
+    font-weight: 700;
+    margin: 0 40px;
+}
+
+.navlist ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navlist a {
     color: inherit;
     text-decoration: inherit;
 }

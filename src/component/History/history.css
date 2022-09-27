@@ -1,0 +1,16 @@
+.history {
+    display: flex;
+    margin-top: 100px;
+}
+
+.history-image {
+    height: auto;
+    width: 32vw;
+    box-shadow: -12px 12px 13px 2px #919191;
+    border-radius: 10px;
+    margin-left: 5vw;
+}
+
+.history-bold {
+    font-weight: 700;
+}
