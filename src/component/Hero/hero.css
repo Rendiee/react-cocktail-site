@@ -49,9 +49,10 @@
     content: "";
     position: absolute;
     z-index: -1;
-    top: 0vh;
-    right: 0vh;
-    width: 80vw;
+    background-size: contain;
+    top: 6vw;
+    right: 14vw;
+    width: 35vw;
     aspect-ratio: 1;
     background-image: url('../../assets/hero-blob.png');
     background-repeat: no-repeat;
