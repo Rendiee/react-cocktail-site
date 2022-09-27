@@ -1,13 +1,14 @@
 import './hero.css';
 import React from 'react';
-import cocktail from '../../assets/hero-cocktail.png';
-import blob from '../../assets/hero-blob.png';
+import heroimage from '../../assets/hero-image.png';
+import decoration from '../../assets/decoration.png';
 import draw from '../../assets/hero-draw.png';
 
 class Hero extends React.Component {
     render () {
         return (
             <section>
+                <img className='hero-rectangle' src={decoration} alt='rectangle decoration' />
                 <div className='hero-container'>
                     <div>
                         <h1 className='hero-title'>Une soirée <span className='hero-yellow-text'>innoubliable</span> !</h1>
@@ -16,8 +17,9 @@ class Hero extends React.Component {
                             <button className='hero-cta'>Découvrir</button>
                         </div>
                     </div>
-                    <div className='test'>
-                        <img className='hero-image' src={cocktail} alt='cocktail illustration'/>
+                    <div>
+                        <img className='hero-image' src={heroimage} alt='cocktail illustration'/>
+                        {/* <img className='hero-image' src={cocktail} alt='cocktail illustration'/> */}
                         {/* <img className='hero-blob-img' src={blob} alt='blob' /> */}
                     </div>
                 </div>
