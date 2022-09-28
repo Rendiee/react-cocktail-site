@@ -1,6 +1,7 @@
 .history {
     display: flex;
     margin-top: 100px;
+    margin-bottom: 150px;
 }
 
 .history-image {
@@ -8,9 +9,24 @@
     width: 32vw;
     box-shadow: -12px 12px 13px 2px #919191;
     border-radius: 10px;
-    margin-left: 5vw;
+    margin-left: 8vw;
+}
+
+.history-text-bg {
+    position: absolute;
+    padding: 3rem 5rem;
+    border-radius: 8px;
+    background-image: url('../../assets/history-text.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    right: 25rem;
+    top: 66rem;
 }
 
 .history-bold {
     font-weight: 700;
+}
+
+.history-italic {
+    font-style: italic;
 }

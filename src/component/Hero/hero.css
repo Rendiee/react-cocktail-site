@@ -51,6 +51,14 @@
     height: 100%;
 }
 
+.hero-draw {
+    background-image: url('../../assets/hero-draw.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 18rem;
+    padding-bottom: 1rem;
+}
+
 .hero-yellow-text {
     color: #FFDC99;
 }

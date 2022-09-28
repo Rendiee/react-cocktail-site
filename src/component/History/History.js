@@ -7,14 +7,16 @@ class History extends React.Component {
         return (
             <section className="history">
                 <img className="history-image" src={history} alt='history of cocktail' />
-                <div>
-                    <h1>Une boisse pleine <span>d'histoire</span> !</h1>
+                <div className="history-text-bg">
+                    <h1>Une boisse pleine <span className="history-italic">d'histoire</span> !</h1>
+                    <br/>
                     <p>
                         C’est en 1862 que le tout premier livre sur le métier de barman,<br/>
                         “<span className="history-bold">The Bartender’s Guide</span>” de Jerry Thomas est publié.<br/>
                         Thomas, plus connu sous le nom de “<span className="history-bold">The Professor</span>”, est souvent<br/>
                         appelé le parrain de l’industrie américaine du barman !
                     </p>
+                    <br/>
                     <p>
                         Son livre contenait certaines des premières recettes de cocktails<br/>
                         faits maison au bar. Les années 1800 ont été un <span className="history-bold">âge d’or</span> pour les<br/>
