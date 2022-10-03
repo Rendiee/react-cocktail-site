@@ -10,13 +10,17 @@ export default function Cocktail () {
     const [items, setItems] = useState([]);
 
     const fetchData = async () => {
-        //const response = await fetch("www.thecocktaildb.com/api/json/v1/1/random.php");
-        //const response = await fetch("https://jsonplaceholder.typicode.com/posts");
-        const response = await fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=");
-        setItems(response);
-        const data = response.json(response);
-        console.log(data);
-        //setItems(data);
+        try {
+            const response = await fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic");
+            if(response.ok) {
+                console.log(response);
+                const data = await response.json();
+                console.log(data);
+                setItems(data);
+            }
+        }catch(error) {
+            setError(error);
+        }
     }
 
     useEffect(() => {
@@ -25,10 +29,11 @@ export default function Cocktail () {
 
     return(
         <div className="cocktail-list">
-            {items.map(item => (
+            {items.drinks.map(item => (
                 <CocktailCard
+                    uniqueId={item.idDrink}
                     title={item.strDrink}
-                    img={item.strDrinkThumb}
+                    img={item.strDrinkThumb+'/preview'}
                 />
             ))}
         </div>
