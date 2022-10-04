@@ -1,9 +1,24 @@
 .cocktail-card {
-    border-width: 2px;
-    border-style: solid;
-    border-image: linear-gradient(225deg, #cfcfcf99, white) 1;
-    margin: auto;
-    padding: 2rem;
+    display: flex;
+    border: 2px solid #cfcfcf99;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 0 4rem;
+    overflow: hidden;
+    position: relative;
+    justify-content: space-around;
+}
+
+.cocktail-card-info {
+    width: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cocktail-card-img {
+    border-radius: 10px;
+    border: 1px solid #d9d9d9;
 }
 
 .cocktail-card-title {
@@ -12,6 +27,36 @@
     text-align: center;
     font-size: 1.2em;
     color: #353535;
-    padding-top: 0.5rem;
-    word-break: break-all;
+    padding-top: 2.5rem;
+    padding-bottom: 1rem;
+}
+
+.cocktail-card-small {
+    color: #4d4d4d;
+}
+
+.cocktail-card-button {
+    background-color: #363636;
+    padding: 0.8rem 1.3rem;
+    background-image: url('../../assets/arrow.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    margin: auto;
+}
+
+.cocktail-card-square {
+    width: 41rem;
+    height: 12rem;
+    background-color: #FFEAEA;
+    position: absolute;
+    z-index: -1;
+    margin-left: 22rem;
+    margin-top: -3rem;
+}
+
+.cocktail-card-align-center {
+    text-align: center;
 }
