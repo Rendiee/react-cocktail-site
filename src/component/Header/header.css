@@ -9,6 +9,26 @@
     font-size: larger;
     font-weight: 700;
     margin: 0 40px;
+    cursor: pointer;
+}
+
+.menu-icon {
+    cursor: pointer;
+    display: none;
+}
+@media screen and (max-width: 850px) {
+    .menu-icon {
+        display: block;
+   }
+
+   .nav-bar {
+    display: none;
+    position: absolute;
+    top: 3.7rem;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
 }
 
 .navlist ul {
