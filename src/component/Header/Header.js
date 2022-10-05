@@ -7,18 +7,21 @@ class Header extends React.Component {
     render() {
         return (
             <header>
-                <nav className='navlist'>
+                <nav className='navbar'>
                     <a href='#'><img className='header-logo' src={logo} alt='Logo : cocktail party' /></a>
-                    <ul className='nav-bar'>
-                        <li><a href='#'>Accueil</a></li>
-                        <li><a href='#'>Histoire</a></li>
-                        <li><a href='#'>Cocktails</a></li>
-                        <li className='header-search'>
-                            <img src={search} alt='search icon' />
-                            <input className='header-search-input' type="text" placeholder="Chercher ..." />
+                    <ul className='nav-menu'>
+                        <li className='nav-item'><a className='nav-link' href='#'>Accueil</a></li>
+                        <li className='nav-item'><a className='nav-link' href='#'>Histoire</a></li>
+                        <li className='nav-item'><a className='nav-link' href='#'>Cocktails</a></li>
+                        <li className='nav-search nav-item'>
+                            <img src={search} alt='search icon'/>
+                            <input className='nav-search-input' type="text" placeholder="Chercher ..." />
                         </li>
-                        <li><a className='menu-icon'>&#9776;</a></li>
                     </ul>
+                    <div className='hamburger'>
+                        <input class="side-menu" type="checkbox" id="side-menu"/>
+                        <label for="side-menu">&#9776;</label>
+                    </div>
                 </nav>
             </header>
         )
