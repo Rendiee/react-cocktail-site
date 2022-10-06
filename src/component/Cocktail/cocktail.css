@@ -1,16 +1,35 @@
 .cocktail-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-row-gap: 2rem;
+    grid-column-gap: 3vw;
+}
+
+@media only screen and (min-width : 480px) {
+    .cocktail-list {
+    grid-template-columns: repeat(2, 1fr);
     }
+}
+
+@media only screen and (min-width : 768px) {
+    .cocktail-list {
+    grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (min-width : 1025px) {
+    .cocktail-list {
+    grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media only screen and (min-width : 1201px) {
+    .cocktail-list {
+    grid-template-columns: repeat(5, 1fr);
+    }
+}
 
 .cocktail-title {
     text-align: center;
     margin: 3rem 0;
 }
-/* .cocktail-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-} */
