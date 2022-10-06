@@ -10,7 +10,7 @@
 
 .hero-title{
     font-weight: 500;
-    font-size: 3vw;
+    font-size: 2.5vw;
 }
 
 .hero-text {
@@ -37,8 +37,8 @@
 }
 
 .hero-image {
-    width: auto;
-    height: 650px;
+    width: 40%;
+    height: auto;
     margin-top: 5vh;
     margin-right: 4vw;
 }
@@ -55,10 +55,17 @@
     background-image: url('../../assets/hero-draw.png');
     background-repeat: no-repeat;
     background-position: bottom;
-    background-size: 18rem;
+    background-size: 12rem;
     padding-bottom: 1rem;
 }
 
 .hero-yellow-text {
     color: #FFDC99;
+}
+
+@media screen and (max-width: 768px) {
+    .hero-container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
 }

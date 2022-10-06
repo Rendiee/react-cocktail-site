@@ -19,8 +19,8 @@ class Header extends React.Component {
                         </li>
                     </ul>
                     <div className='hamburger'>
-                        <input class="side-menu" type="checkbox" id="side-menu"/>
-                        <label for="side-menu">&#9776;</label>
+                        <input className="side-menu" type="checkbox" id="side-menu"/>
+                        <label htmlFor='side-menu'>&#9776;</label>
                     </div>
                 </nav>
             </header>

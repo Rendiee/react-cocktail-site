@@ -8,7 +8,7 @@ class History extends React.Component {
             <section className="history">
                 <img className="history-image" src={history} alt='history of cocktail' />
                 <div className="history-text-bg">
-                    <h1>Une boisse pleine <span className="history-italic">d'histoire</span> !</h1>
+                    <h1>Une boisson pleine <span className="history-italic">d'histoire</span> !</h1>
                     <br/>
                     <p>
                         C’est en 1862 que le tout premier livre sur le métier de barman,<br/>

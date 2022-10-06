@@ -44,14 +44,14 @@
 
 .header-logo {
     width: auto;
-    height: 80px;
+    height: 6vw;
 }
 
 .side-menu {
     display: none;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 768px) {
     .nav-menu {
         display: none;
     }

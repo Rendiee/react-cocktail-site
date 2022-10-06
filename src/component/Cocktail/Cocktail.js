@@ -6,30 +6,14 @@ import './cocktail.css';
  
 export default function Cocktail () {
 
-    const [error, setError] = useState(null);
-    const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState([]);
 
     const baseUrl = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic';
-    const baseUrl2 = 'https://jsonplaceholder.typicode.com/users';
 
     const fetchData = async () => {
 
-        // try {
-        //     const response = await fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic");
-        //     if(response.ok) {
-        //         console.log(response);
-        //         const data = await response.json();
-        //         console.log(data);
-        //         setItems(data);
-        //     }
-        // }catch(error) {
-        //     setError(error);
-        // }
-
         axios.get(baseUrl).then(response => {
             setItems(response.data.drinks);
-            console.log(response.data.drinks);
         })
 
     }
@@ -45,7 +29,6 @@ export default function Cocktail () {
             <div className="cocktail-list">
                 {items.map(item => (
                     <CocktailCard
-                        key={item.idDrink}
                         title={item.strDrink}
                         img={item.strDrinkThumb+'/preview'}
                     />
