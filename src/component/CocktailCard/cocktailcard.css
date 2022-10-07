@@ -2,9 +2,7 @@
     display: flex;
     border: 2px solid #cfcfcf99;
     border-radius: 10px;
-    padding: 1.5rem;
-    overflow: hidden;
-    position: relative;
+    padding: 1.5rem 1.5rem 0.5rem 1.5rem;
     justify-content: space-between;
     flex-direction: column;
     text-align: center;
@@ -12,12 +10,15 @@
 
 .cocktail-card-info {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
 }
 
 .cocktail-card-img {
     border-radius: 10px;
     border: 1px solid #d9d9d9;
+    height: auto;
+    width: 150px;
+    margin: auto;
 }
 
 .cocktail-card-title {
@@ -26,7 +27,7 @@
     text-align: center;
     font-size: 1.2em;
     color: #353535;
-    padding-top: 1.5rem;
+    padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 }
 
@@ -36,24 +37,17 @@
 }
 
 .cocktail-card-button {
-    background-color: #363636;
-    padding: 0.8rem 1.3rem;
-    background-image: url('../../assets/arrow.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 0.8rem;
-    border: none;
+    background-color: transparent;
+    padding: 0.5rem 1.3rem;
+    border: 2px solid #960000;
+    color: #960000;
     border-radius: 5px;
-    margin: auto;
     cursor: pointer;
+    font-family: 'Kodchasan';
+    font-weight: bolder;
 }
 
-.cocktail-card-square {
-    width: 41rem;
-    height: 12rem;
-    background-color: #FFEAEA;
-    position: absolute;
-    z-index: -1;
-    margin-left: 22rem;
-    margin-top: -3rem;
+.cocktail-card-button:hover {
+    background-color: #960000;
+    color: white;
 }

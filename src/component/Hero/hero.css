@@ -6,16 +6,17 @@
 
 .hero-left {
     margin-left: 4vw;
+    width: 50%;
 }
 
 .hero-title{
     font-weight: 500;
-    font-size: 2.5vw;
+    font-size: 2.7rem;
 }
 
 .hero-text {
-    font-size: 1.2vw;
-    margin-top: 1.2vw;
+    font-size: 1.2rem;
+    margin-top: 1rem;
 }
 
 .hero-red-text {
@@ -25,19 +26,18 @@
 
 .hero-cta {
     all: unset;
-    background-color: #FFA1A1;
+    background-color: #960000;
     color: white;
     border-radius: 8px;
     padding: 5px 50px;
     font-weight: 500;
-    font-size: 1.1vw;
+    font-size: 1.1rem;
     margin-top: 4.5vh;
-    display: block;
     cursor: pointer;
 }
 
 .hero-image {
-    width: 40%;
+    width: 35%;
     height: auto;
     margin-top: 5vh;
     margin-right: 4vw;
@@ -65,7 +65,30 @@
 
 @media screen and (max-width: 768px) {
     .hero-container {
-        display: flex;
-        flex-direction: column-reverse;
+        display: block;
+        text-align: center;
     }
+
+    .hero-left {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .hero-image {
+        margin-right: 0;
+        width: 60%;
+    }
+
+    .hero-rectangle {
+        height: 50%;
+    }
+
+    /* .hero-title {
+        font-size: 5vw;
+    }
+
+    .hero-text {
+        font-size: 3vw;
+        margin-top: 1rem;
+    } */
 }

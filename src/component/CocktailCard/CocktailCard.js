@@ -1,21 +1,19 @@
 import React from "react"
 import './cocktailcard.css';
-import arrow from '../../assets/arrow.png';
 
-class CocktailCard extends React.Component {
-    render() {
-        return(
-            <div className="cocktail-card" key={this.props.key}>
-                <img className="cocktail-card-img" src={this.props.img} alt='cocktail img' />
-                <div className="cocktail-card-info">
-                    <p className="cocktail-card-title">{this.props.title}</p>
-                    <small className="cocktail-card-small">Cocktail sans alcool</small>
-                    <button className="cocktail-card-button"></button>
-                </div>
-                <div className="cocktail-card-square"></div>
+export default function CocktailCard (props) {
+
+    //style={{backgroundColor: `rgb(255,${Math.floor(Math.random() * (255 - 229 + 1) + 229)}, 229)`}
+
+    return(
+        <div className="cocktail-card" key={props.key}>
+            <img className="cocktail-card-img" src={props.img} alt='cocktail img' />
+            <p className="cocktail-card-title">{props.title}</p>
+            <div className="cocktail-card-info">
+                <p className="cocktail-card-small">Sans alcool</p>
+                <p>★★★☆☆</p>
             </div>
-        )
-    }
+            <button className="cocktail-card-button">Découvrir</button>
+        </div>
+    )
 }
-
-export default CocktailCard;
