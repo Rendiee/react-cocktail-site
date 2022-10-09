@@ -47,16 +47,38 @@
     height: 6vw;
 }
 
-.side-menu {
+.burger-menu {
     display: none;
+    width: 1.3rem;
 }
 
 @media screen and (max-width: 768px) {
     .nav-menu {
-        display: none;
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        width: 100%;
+        background-color: #e4e4e4a1;
+        top: 0;
+        left: 0;
+        height: 25%;
+        backdrop-filter: blur(5px);
+        justify-content: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
     }
 
-    .hamburger {
+    .nav-item {
+        margin: 8px 0;
+    }
+
+    .burger-menu {
         display: block;
-   }
+        position: absolute;
+        right: 5%;
+    }
+
+    .mobile-menu {
+        margin-left: 0;
+    }
 }

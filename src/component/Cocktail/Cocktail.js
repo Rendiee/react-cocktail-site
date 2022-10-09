@@ -23,7 +23,7 @@ export default function Cocktail () {
     }, [])
 
     return(
-        <div>
+        <section>
             <hr />
             <h1 className="cocktail-title">Liste de cocktails</h1>
             <div className="cocktail-list">
@@ -34,6 +34,6 @@ export default function Cocktail () {
                     />
                 ))}
             </div>
-        </div>
+        </section>
     )
 }
