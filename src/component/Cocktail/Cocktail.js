@@ -7,25 +7,26 @@ import './cocktail.css';
 export default function Cocktail () {
 
     const [items, setItems] = useState([]);
+    const [error, setError] = useState(null);
 
     const baseUrl = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic';
 
     const fetchData = async () => {
-
-        axios.get(baseUrl).then(response => {
+        axios.get(baseUrl)
+        .then(response => {
             setItems(response.data.drinks);
         })
-
+        .catch(error => {
+            setError(error);
+        })
     }
 
     useEffect(() => {
         fetchData();
     }, [])
 
-    return(
-        <section>
-            <hr />
-            <h1 className="cocktail-title">Liste de cocktails</h1>
+    const getCocktailList = () => {
+        return (
             <div className="cocktail-list">
                 {items.map(item => (
                     <CocktailCard
@@ -34,6 +35,23 @@ export default function Cocktail () {
                     />
                 ))}
             </div>
+        )
+    }
+
+    const getErrorView = () => {
+        return (
+            <div className="error-section">
+                <p className="error-text">Une erreur s'est produite !<br/>{error}</p>
+                <button className="error-button" onClick={() => fetchData()}>Recharger</button>
+            </div>
+        )
+    }
+
+    return(
+        <section className="cocktail" id="cocktail">
+            <hr />
+            <h1 className="cocktail-title">Liste de cocktails</h1>
+            {error ? getErrorView() : getCocktailList()}
         </section>
     )
 }

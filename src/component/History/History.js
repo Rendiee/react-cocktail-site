@@ -5,7 +5,7 @@ import history from '../../assets/history.png';
 class History extends React.Component {
     render() {
         return (
-            <section className="history">
+            <section className="history" id="histoire">
                 <img className="history-image" src={history} alt='history of cocktail' />
                 <div className="history-text-bg">
                     <h1>Une boisson pleine <span className="history-italic">d'histoire</span> !</h1>

@@ -1,3 +1,7 @@
+.cocktail {
+    margin: 50px 0;
+}
+
 .cocktail-list {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -38,4 +42,33 @@
 .cocktail-title {
     text-align: center;
     margin: 3rem 0;
+}
+
+.error-section {
+    background-color: #960000;
+    padding: 1rem;
+    width: 25%;
+    margin: auto;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.error-text {
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.error-button {
+    all: unset;
+    color: white;
+    font-weight: bolder;
+    background-color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    cursor: pointer;
 }

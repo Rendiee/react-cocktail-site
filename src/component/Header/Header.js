@@ -18,11 +18,11 @@ export default function Header () {
     return (
         <header>
             <nav className='navbar'>
-                <a href='#'><img className='header-logo' src={logo} alt='Logo : cocktail party' /></a>
+                <img className='header-logo' src={logo} alt='logo cocktail party'/>
                 <ul className={isActive ? "nav-menu mobile-menu" : "nav-menu"}>
-                    <li className='nav-item'><a className='nav-link' href='#'>Accueil</a></li>
-                    <li className='nav-item'><a className='nav-link' href='#'>Histoire</a></li>
-                    <li className='nav-item'><a className='nav-link' href='#'>Cocktails</a></li>
+                    <li className='nav-item'><a className='nav-link' href='#accueil'>Accueil</a></li>
+                    <li className='nav-item'><a className='nav-link' href='#histoire'>Histoire</a></li>
+                    <li className='nav-item'><a className='nav-link' href='#cocktail'>Cocktails</a></li>
                     <li className='nav-search nav-item'>
                         <img src={search} alt='search icon'/>
                         <input className='nav-search-input' type="text" placeholder="Chercher ..." />
