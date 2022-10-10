@@ -1,7 +1,7 @@
 import './hero.css';
 import React from 'react';
-import heroimage from '../../assets/hero-image.png';
-import decoration from '../../assets/decoration.png';
+import heroimage from '../../assets/cocktail.png';
+import decoration from '../../assets/hero-blob.png';
 
 class Hero extends React.Component {
     render () {

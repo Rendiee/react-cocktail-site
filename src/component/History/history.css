@@ -38,3 +38,28 @@
     border-radius: 5px;
     font-weight: bolder;
 }
+
+.history-right {
+    width: 50%;
+}
+
+@media screen and (max-width: 870px) {
+    .history {
+        margin: 2rem 0;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .history-text {
+        text-align: left;
+    }
+
+    .history-right {
+        width: fit-content;
+    }
+
+    .history-image {
+        margin-top: 3rem;
+        width: 63vw;
+    }
+}

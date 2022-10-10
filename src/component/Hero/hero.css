@@ -37,7 +37,7 @@
 }
 
 .hero-image {
-    width: 35%;
+    width: 30%;
     height: auto;
     margin-top: 5vh;
     margin-right: 4vw;
@@ -46,9 +46,10 @@
 .hero-rectangle {
     position: absolute;
     z-index: -1;
-    top: 2vh;
-    left: 0;
-    height: 100%;
+    top: 20vh;
+    left: -10vw;
+    height: auto;
+    width: 32vw;
 }
 
 .hero-draw {
@@ -63,10 +64,17 @@
     color: #FFDC99;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width : 1224px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 870px) {
     .hero-container {
         display: block;
         text-align: center;
+        margin-top: 30px;
     }
 
     .hero-left {
@@ -76,10 +84,10 @@
 
     .hero-image {
         margin-right: 0;
-        width: 60%;
+        width: 50%;
     }
 
     .hero-rectangle {
-        height: 50%;
+        display: none;
     }
 }
