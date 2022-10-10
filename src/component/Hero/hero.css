@@ -29,7 +29,7 @@
     background-color: #960000;
     color: white;
     border-radius: 8px;
-    padding: 5px 50px;
+    padding: 0.5rem 2rem;
     font-weight: 500;
     font-size: 1.1rem;
     margin-top: 4.5vh;
@@ -82,13 +82,4 @@
     .hero-rectangle {
         height: 50%;
     }
-
-    /* .hero-title {
-        font-size: 5vw;
-    }
-
-    .hero-text {
-        font-size: 3vw;
-        margin-top: 1rem;
-    } */
 }

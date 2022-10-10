@@ -7,8 +7,9 @@ class History extends React.Component {
         return (
             <section className="history" id="histoire">
                 <img className="history-image" src={history} alt='history of cocktail' />
-                <div className="history-text-bg">
-                    <h1>Une boisson pleine <span className="history-italic">d'histoire</span> !</h1>
+                <div>
+                    <small className="history-small">Une touche d'alcool 🍸</small>
+                    <h1 className="history-title">Une boisson pleine <span className="history-italic">d'histoire</span> !</h1>
                     <br/>
                     <p>
                         C’est en 1862 que le tout premier livre sur le métier de barman,<br/>
@@ -23,6 +24,7 @@ class History extends React.Component {
                         cocktails aux États-Unis. La profession de barman était l’une des<br/>
                         plus rémunératrices.
                     </p>
+                    <a href="https://www.amazon.fr/Jerry-Thomas-Bartenders-Guide-Companion/dp/1440453268" target="_blank" rel='noreferrer'><button className="history-book">Acheter</button></a>
                 </div>
             </section>
         )
