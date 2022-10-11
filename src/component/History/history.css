@@ -46,7 +46,7 @@
 
 @media screen and (max-width: 870px) {
     .history {
-        margin: 2rem 0;
+        margin: 2rem 5vw;
         flex-direction: column-reverse;
         text-align: center;
     }

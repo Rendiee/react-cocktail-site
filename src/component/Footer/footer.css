@@ -24,7 +24,7 @@ footer {
 }
 
 .footer-text {
-    width: 20%;
+    width: 30%;
 }
 
 .footer-github {
@@ -35,9 +35,29 @@ footer {
 
 .footer-img {
     display: flex;
+    justify-content: center;
 }
 
 .footer-menu li{
     list-style-type: disc;
     margin: 5px 0;
+}
+
+@media screen and (max-width: 520px) {
+    .footer-upper {
+        flex-direction: column;
+        align-items: center;
+        padding: 6vh 0;
+    }
+
+    .footer-text {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .footer-logo {
+        display: none;
+    }
 }
