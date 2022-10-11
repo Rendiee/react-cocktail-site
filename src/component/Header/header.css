@@ -1,3 +1,7 @@
+header {
+    margin: 0 5vw;
+}
+
 .navbar {
     display: flex;
     align-items: center;

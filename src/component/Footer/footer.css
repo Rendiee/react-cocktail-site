@@ -1,0 +1,43 @@
+footer {
+    background-color: #FFAD7E;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.footer-upper {
+    display: flex;
+    justify-content: space-around;
+    padding: 10vh 0;
+}
+
+.footer-logo {
+    width: auto;
+    height: 5vw;
+}
+
+.footer-bar {
+    height: 2px;
+    background-color: white;
+    border: none;
+    width: 75%;
+    margin: auto;
+}
+
+.footer-text {
+    width: 20%;
+}
+
+.footer-github {
+    height: auto;
+    width: 40px;
+    margin: 20px 0;
+}
+
+.footer-img {
+    display: flex;
+}
+
+.footer-menu li{
+    list-style-type: disc;
+    margin: 5px 0;
+}

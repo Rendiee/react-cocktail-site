@@ -1,4 +1,5 @@
 .hero-container {
+    margin: 0 5vw;
     display: flex;
     justify-content: space-between;
     align-items: center;

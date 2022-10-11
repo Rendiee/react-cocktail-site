@@ -2,6 +2,7 @@ import Header from "./component/Header/Header";
 import Hero from "./component/Hero/Hero";
 import History from "./component/History/History";
 import Cocktail from "./component/Cocktail/Cocktail";
+import Footer from "./component/Footer/Footer";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Hero />
       <History />
       <Cocktail />
+      <Footer />
     </div>
   );
 }
