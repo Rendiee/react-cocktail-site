@@ -21,6 +21,13 @@ export default function Cocktail () {
         })
     }
 
+    const imageFirstLoad = 5;
+    const [cocktailShow, setCocktailShow] = useState(imageFirstLoad);
+
+    const handleMoreCocktail = () => {
+        setCocktailShow(cocktailShow => cocktailShow + imageFirstLoad);
+    }
+
     useEffect(() => {
         fetchData();
     }, [])
@@ -28,12 +35,13 @@ export default function Cocktail () {
     const getCocktailList = () => {
         return (
             <div className="cocktail-list">
-                {items.map(item => (
+                {items.slice(0, cocktailShow).map(item => (
                     <CocktailCard
                         title={item.strDrink}
                         img={item.strDrinkThumb+'/preview'}
                     />
                 ))}
+
             </div>
         )
     }
@@ -47,11 +55,20 @@ export default function Cocktail () {
         )
     }
 
+    const buttonLoadMore = () => {
+        return (
+            <div className="cocktail-load">
+                <button className="cocktail-more" onClick={handleMoreCocktail}>Charger plus</button>
+            </div>
+        )
+    }
+
     return(
         <section className="cocktail" id="cocktail">
             <hr />
             <h1 className="cocktail-title">Liste de cocktails</h1>
             {error ? getErrorView() : getCocktailList()}
+            {cocktailShow < items.length ? buttonLoadMore() : null}
         </section>
     )
 }

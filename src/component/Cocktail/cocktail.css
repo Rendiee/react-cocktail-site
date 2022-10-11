@@ -9,6 +9,22 @@
     grid-column-gap: 3vw;
 }
 
+.cocktail-load {
+    display: flex;
+    justify-content: center;
+}
+
+.cocktail-more {
+    all: unset;
+    margin-top: 50px;
+    padding: 0.5rem 2rem;
+    background-color: #960000;
+    color: white;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
 @media only screen and (min-width : 480px) {
     .cocktail-list {
     grid-template-columns: repeat(2, 1fr);
