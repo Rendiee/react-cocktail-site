@@ -1,18 +1,11 @@
-import Header from "./component/Header/Header";
-import Hero from "./component/Hero/Hero";
-import History from "./component/History/History";
-import Cocktail from "./component/Cocktail/Cocktail";
-import Footer from "./component/Footer/Footer";
+import { Route, Routes } from "react-router-dom";
+import MainPage from "./component/MainPage/MainPage";
 
 function App() {
   return (
-    <div>
-      <Header/>
-      <Hero />
-      <History />
-      <Cocktail />
-      <Footer />
-    </div>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+      </Routes>
   );
 }
 

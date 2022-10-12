@@ -72,8 +72,8 @@ export default function Cocktail () {
             <hr />
             <h1 className="cocktail-title">Liste de cocktails</h1>
             {error ? getErrorView() : getCocktailList()}
+            <small className="cocktail-load-text">- {cocktailShow} cocktails sur {items.length} -</small>
             {cocktailShow < items.length ? buttonLoadMore() : null}
-            <small className="cocktail-load-text">{cocktailShow} / 58</small>
         </section>
     )
 }
