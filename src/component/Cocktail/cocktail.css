@@ -25,6 +25,12 @@
     cursor: pointer;
 }
 
+.cocktail-load-text {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
 @media only screen and (min-width : 480px) {
     .cocktail-list {
     grid-template-columns: repeat(2, 1fr);

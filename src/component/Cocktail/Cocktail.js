@@ -25,7 +25,11 @@ export default function Cocktail () {
     const [cocktailShow, setCocktailShow] = useState(imageFirstLoad);
 
     const handleMoreCocktail = () => {
-        setCocktailShow(cocktailShow => cocktailShow + imageFirstLoad);
+        if(cocktailShow + imageFirstLoad >= items.length) {
+            setCocktailShow(58);
+        }else{
+            setCocktailShow(cocktailShow => cocktailShow + imageFirstLoad);
+        }
     }
 
     useEffect(() => {
@@ -69,6 +73,7 @@ export default function Cocktail () {
             <h1 className="cocktail-title">Liste de cocktails</h1>
             {error ? getErrorView() : getCocktailList()}
             {cocktailShow < items.length ? buttonLoadMore() : null}
+            <small className="cocktail-load-text">{cocktailShow} / 58</small>
         </section>
     )
 }
