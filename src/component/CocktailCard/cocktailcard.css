@@ -51,3 +51,28 @@
     background-color: #960000;
     color: white;
 }
+
+@-webkit-keyframes card-animation {
+    0% {
+      -webkit-transform: translateZ(-500px) translateY(-200px);
+              transform: translateZ(-500px) translateY(-200px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0) translateY(0);
+              transform: translateZ(0) translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes card-animation {
+    0% {
+      -webkit-transform: translateZ(-500px) translateY(-200px);
+              transform: translateZ(-500px) translateY(-200px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0) translateY(0);
+              transform: translateZ(0) translateY(0);
+      opacity: 1;
+    }
+  }

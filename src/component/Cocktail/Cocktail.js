@@ -36,16 +36,19 @@ export default function Cocktail () {
         fetchData();
     }, [])
 
+    let animationDelay = 0.05;
+
     const getCocktailList = () => {
         return (
             <div className="cocktail-list">
                 {items.slice(0, cocktailShow).map(item => (
+                    animationDelay =+ 0.05,
                     <CocktailCard
+                        animationDelay={animationDelay + 's'}
                         title={item.strDrink}
                         img={item.strDrinkThumb+'/preview'}
                     />
                 ))}
-
             </div>
         )
     }
@@ -65,7 +68,7 @@ export default function Cocktail () {
                 <button className="cocktail-more" onClick={handleMoreCocktail}>Charger plus</button>
             </div>
         )
-    }
+    }  
 
     return(
         <section className="cocktail" id="cocktail">
