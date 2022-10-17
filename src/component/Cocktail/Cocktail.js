@@ -36,17 +36,15 @@ export default function Cocktail () {
         fetchData();
     }, [])
 
-    let animationDelay = 0.05;
-
     const getCocktailList = () => {
         return (
             <div className="cocktail-list">
                 {items.slice(0, cocktailShow).map(item => (
-                    animationDelay =+ 0.05,
                     <CocktailCard
-                        animationDelay={animationDelay + 's'}
+                        animationDelay={'0.05s'}
                         title={item.strDrink}
                         img={item.strDrinkThumb+'/preview'}
+                        id={item.idDrink}
                     />
                 ))}
             </div>

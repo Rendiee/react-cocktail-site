@@ -1,0 +1,46 @@
+.pagenotfound {
+    margin: 100px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.pagenotfound-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pagenotfound-img {
+    height: auto;
+    width: 20vw;
+}
+
+.pagenotfound-title {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.pagenotfound-text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.pagenotfound-debug {
+    margin-top: 1rem;
+    color: #960000;
+    font-weight: 400;
+}
+
+.pagenotfound-button {
+    background-color: #960000;
+    color: white;
+    border-radius: 8px;
+    padding: 0.5rem 2rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-top: 3vh;
+    cursor: pointer;
+    width: 50%;
+    text-align: center;
+}

@@ -6,7 +6,7 @@ import decoration from '../../assets/hero-blob.png';
 class Hero extends React.Component {
     render () {
         return (
-            <section className='hero-container' id='accueil'>
+            <section className='hero-container'>
                 <img className='hero-rectangle' src={decoration} alt='rectangle decoration' />
                 <div className='hero-left'>
                     <h1 className='hero-title'>Une soirée <span className='hero-yellow-text hero-draw'>innoubliable</span> !</h1>

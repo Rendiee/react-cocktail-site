@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom";
 import './cocktailcard.css';
 
 export default function CocktailCard (props) {
@@ -37,7 +38,7 @@ export default function CocktailCard (props) {
                 <p className="cocktail-card-small">Sans alcool</p>
                 <p>{generateRandomStarsNote()}</p>
             </div>
-            <button className="cocktail-card-button">Découvrir</button>
+            <Link className="cocktail-card-button" to={'cocktail/' + props.id}>Découvrir</Link>
         </div>
     )
 }

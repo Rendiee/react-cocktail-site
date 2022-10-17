@@ -5,6 +5,7 @@ import search from '../../assets/search.png';
 
 import burger from '../../assets/menu-btn.png';
 import close from '../../assets/close.png';
+import { HashLink } from 'react-router-hash-link';
 
 //&#9776; BURGER ICON
 export default function Header () {
@@ -16,13 +17,13 @@ export default function Header () {
     }
 
     return (
-        <header>
+        <header id='accueil'>
             <nav className='navbar'>
                 <img className='header-logo' src={logo} alt='logo cocktail party'/>
                 <ul className={isActive ? "nav-menu mobile-menu" : "nav-menu"}>
-                    <li className='nav-item'><a className='nav-link' href='#accueil'>Accueil</a></li>
-                    <li className='nav-item'><a className='nav-link' href='#histoire'>Histoire</a></li>
-                    <li className='nav-item'><a className='nav-link' href='#cocktail'>Cocktails</a></li>
+                    <HashLink className='nav-item' to={"/#accueil"}>Accueil</HashLink>
+                    <HashLink className='nav-item' to={"/#histoire"}>Histoire</HashLink>
+                    <HashLink className='nav-item' to={"/#cocktail"}>Cocktails</HashLink>
                     <li className='nav-search nav-item'>
                         <img src={search} alt='search icon'/>
                         <input className='nav-search-input' type="text" placeholder="Chercher ..." />
