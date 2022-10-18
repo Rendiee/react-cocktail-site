@@ -38,17 +38,17 @@ export default function CocktailDetail () {
 
     const cocktailDetailSection = () => {
         return (
-            <>
-                <section className='cocktaildetail'>
+            <section className='cocktaildetail'>
+                <div className='cocktaildetail-container'>
                     <div className='cocktaildetail-left'>
                         <img className='cocktaildetail-img' src={items[0].strDrinkThumb}  alt='cocktail illustration'/>
                     </div>
                     <div className='cocktaildetail-right'>
-                        <h1>{items[0].strDrink}</h1>
+                        <h1 className='cocktaildetail-title'>{items[0].strDrink}</h1>
                         <p>{items[0].strInstructions}</p>
                     </div>
-                </section>
-            </>
+                </div>
+            </section>
         )
     }
 

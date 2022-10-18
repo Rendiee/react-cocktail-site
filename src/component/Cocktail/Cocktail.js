@@ -7,7 +7,7 @@ import './cocktail.css';
 export default function Cocktail () {
 
     const [items, setItems] = useState([]);
-    const [error, setError] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
 
     const baseUrl = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic';
 
@@ -15,9 +15,10 @@ export default function Cocktail () {
         axios.get(baseUrl)
         .then(response => {
             setItems(response.data.drinks);
+            setIsLoading(false);
         })
         .catch(error => {
-            setError(error);
+            console.log(error);
         })
     }
 
@@ -51,28 +52,25 @@ export default function Cocktail () {
         )
     }
 
-    const getErrorView = () => {
-        return (
-            <div className="error-section">
-                <p className="error-text">Une erreur s'est produite !<br/>{error}</p>
-                <button className="error-button" onClick={() => fetchData()}>Recharger</button>
-            </div>
-        )
-    }
-
     const buttonLoadMore = () => {
         return (
             <div className="cocktail-load">
                 <button className="cocktail-more" onClick={handleMoreCocktail}>Charger plus</button>
             </div>
         )
-    }  
+    }
+
+    const loadingSection = () => {
+        return (
+            <h1>Chargement des détails ...</h1>
+        )
+    }
 
     return(
         <section className="cocktail" id="cocktail">
             <hr />
             <h1 className="cocktail-title">Liste de cocktails</h1>
-            {error ? getErrorView() : getCocktailList()}
+            {isLoading ? loadingSection() : getCocktailList()}
             <small className="cocktail-load-text">- {cocktailShow} cocktails sur {items.length} -</small>
             {cocktailShow < items.length ? buttonLoadMore() : null}
         </section>

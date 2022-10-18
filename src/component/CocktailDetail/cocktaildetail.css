@@ -1,13 +1,32 @@
 .cocktaildetail {
+    margin: auto;
+    width: min-content;
+}
+
+.cocktaildetail-container {
     margin: 2rem 0;
-    width: 80%;
     display: flex;
     justify-content: center;
+    background-color: rgb(255, 247, 237);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.cocktaildetail-right {
+    margin: 0 5em;
+    width: 20vw;
+    padding: 2rem 0;
 }
 
 .cocktaildetail-img {
+    display: block;
     height: auto;
-    width: 70%;
+    width: 30vw
+}
+
+.cocktaildetail-title {
+    text-align: center;
+    padding-bottom: 1rem;
 }
 
 .loading-section {
