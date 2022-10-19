@@ -22,10 +22,10 @@
 }
 
 .cocktail-card-title {
-    font-style: italic;
-    font-weight: 600;
+    font-family: 'Dancing Script';
+    font-weight: 700;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.8rem;
     color: #353535;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;

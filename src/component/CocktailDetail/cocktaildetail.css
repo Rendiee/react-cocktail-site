@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap');
+
 .cocktaildetail {
     margin: auto;
 }
@@ -22,6 +24,10 @@
     padding: 2rem;
     border-radius: 4px;
     margin-right: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .cocktaildetail-img {
@@ -31,8 +37,21 @@
 }
 
 .cocktaildetail-title {
+    font-family: 'Dancing Script';
     text-align: center;
-    padding-bottom: 1rem;
+    margin: 4rem 0;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.cocktaildetail-undertitle {
+    font-size: 1.3rem;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.cocktaildetail-line {
+    margin: 1.5rem 0;
 }
 
 .cocktaildetail-ingredient li{

@@ -26,18 +26,21 @@ export default function CocktailDetail () {
         })
     };
 
-    const setCocktailIngredient = () => {
-        for(let i = 1; i < 15; i++) {
-            if(items[0]["strIngredient"+i] !== null){
-                setIngredient(arr => [...arr, items[0]["strIngredient"+i]]);
-            }else{
-                break;
+    useEffect(() => {
+
+        fetchData();
+
+        const setCocktailIngredient = () => {
+            setIngredient([]);
+            for(let i = 1; i < 15; i++) {
+                if(items[0]["strIngredient"+i] !== null){
+                    setIngredient(arr => [...arr, items[0]["strIngredient"+i]]);
+                }else{
+                    break;
+                }
             }
         }
-    }
 
-    useEffect(() => {
-        fetchData();
         if(!isLoading) {
             setCocktailIngredient();
         }
@@ -52,13 +55,14 @@ export default function CocktailDetail () {
                     </div>
                     <div className='cocktaildetail-right'>
                         <h1 className='cocktaildetail-title'>{items[0].strDrink}</h1>
+                        <p className='cocktaildetail-undertitle'>Ingrédients :</p>
                         <ul className='cocktaildetail-ingredient'>
                             {ingredient.map(item => (
                                 <li>{item}</li>
                             ))}
-                            {/* {!isLoading ? } */}
                         </ul>
-                        <hr/>
+                        <hr className='cocktaildetail-line'/>
+                        <p className='cocktaildetail-undertitle'>Instruction :</p>
                         <p>{items[0].strInstructions}</p>
                     </div>
                 </div>
