@@ -3,38 +3,45 @@ import axios from "axios";
 import { useParams } from 'react-router-dom';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
+import Loading from '../Loading/Loading';
 import './cocktaildetail.css';
 
 export default function CocktailDetail () {
 
     const [items, setItems] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const [ingredient, setIngredient] = useState([]);
 
     const cocktail = useParams();
+    const baseUrl = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=' + cocktail.id;
+
+    const fetchData = async () => {
+        await axios.get(baseUrl)
+        .then(response => {
+            setItems(response.data.drinks);
+            setIsLoading(false);
+        })
+        .catch(error => {
+            console.log(error);
+        })
+    };
+
+    const setCocktailIngredient = () => {
+        for(let i = 1; i < 15; i++) {
+            if(items[0]["strIngredient"+i] !== null){
+                setIngredient(arr => [...arr, items[0]["strIngredient"+i]]);
+            }else{
+                break;
+            }
+        }
+    }
 
     useEffect(() => {
-        const baseUrl = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=' + cocktail.id;
-
-        const fetchData = async () => {
-            axios.get(baseUrl)
-            .then(response => {
-                setItems(response.data.drinks);
-                setIsLoading(false);
-            })
-            .catch(error => {
-                console.log(error);
-            })
-        };
         fetchData();
-    }, [])
-
-    const loadingSection = () => {
-        return (
-            <div className='loading-section'>
-                <h1>Chargement des détails ...</h1>
-            </div>
-        )
-    }
+        if(!isLoading) {
+            setCocktailIngredient();
+        }
+    }, [isLoading])
 
     const cocktailDetailSection = () => {
         return (
@@ -45,6 +52,13 @@ export default function CocktailDetail () {
                     </div>
                     <div className='cocktaildetail-right'>
                         <h1 className='cocktaildetail-title'>{items[0].strDrink}</h1>
+                        <ul className='cocktaildetail-ingredient'>
+                            {ingredient.map(item => (
+                                <li>{item}</li>
+                            ))}
+                            {/* {!isLoading ? } */}
+                        </ul>
+                        <hr/>
                         <p>{items[0].strInstructions}</p>
                     </div>
                 </div>
@@ -55,7 +69,11 @@ export default function CocktailDetail () {
     return (
         <>
             <Header/>
-            {isLoading ? loadingSection() : cocktailDetailSection()}
+            {isLoading ? (
+                <Loading />
+            ) : (
+                cocktailDetailSection()
+                )}
             <Footer />
         </>
     )

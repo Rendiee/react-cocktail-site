@@ -1,21 +1,27 @@
 .cocktaildetail {
     margin: auto;
-    width: min-content;
 }
 
 .cocktaildetail-container {
     margin: 2rem 0;
     display: flex;
     justify-content: center;
-    background-color: rgb(255, 247, 237);
     padding: 2rem;
     border-radius: 8px;
 }
 
 .cocktaildetail-right {
-    margin: 0 5em;
+    background-color: rgb(255, 247, 237);
+    border-radius: 4px;
     width: 20vw;
-    padding: 2rem 0;
+    padding: 2rem;
+}
+
+.cocktaildetail-left {
+    background-color: rgb(255, 247, 237);
+    padding: 2rem;
+    border-radius: 4px;
+    margin-right: 5rem;
 }
 
 .cocktaildetail-img {
@@ -29,6 +35,14 @@
     padding-bottom: 1rem;
 }
 
+.cocktaildetail-ingredient li{
+    list-style-type: disc;
+    list-style-position: inside;
+    font-weight: 500;
+    padding: 5px 0;
+}
+
 .loading-section {
     margin: 20vh 0;
+    text-align: center;
 }

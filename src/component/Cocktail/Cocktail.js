@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import CocktailCard from "../CocktailCard/CocktailCard";
+import Loading from "../Loading/Loading";
 import './cocktail.css';
  
 export default function Cocktail () {
@@ -60,17 +61,11 @@ export default function Cocktail () {
         )
     }
 
-    const loadingSection = () => {
-        return (
-            <h1>Chargement des détails ...</h1>
-        )
-    }
-
     return(
         <section className="cocktail" id="cocktail">
             <hr />
             <h1 className="cocktail-title">Liste de cocktails</h1>
-            {isLoading ? loadingSection() : getCocktailList()}
+            {isLoading ? <Loading /> : getCocktailList()}
             <small className="cocktail-load-text">- {cocktailShow} cocktails sur {items.length} -</small>
             {cocktailShow < items.length ? buttonLoadMore() : null}
         </section>
