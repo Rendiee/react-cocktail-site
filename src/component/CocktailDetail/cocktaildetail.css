@@ -69,3 +69,23 @@
     margin: 20vh 0;
     text-align: center;
 }
+
+@media screen and (max-width: 870px) {
+    
+    .cocktaildetail-container {
+        flex-direction: column;
+    }
+
+    .cocktaildetail-left {
+        margin: 0;
+    }
+
+    .cocktaildetail-right {
+        width: auto;
+    }
+
+    .cocktaildetail-title {
+        margin: 0 0 1rem 0;
+    }
+
+}

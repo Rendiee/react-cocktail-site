@@ -21,7 +21,7 @@ export default function PageNotFound() {
                 <div className="pagenotfound-left">
                     <h1 className="pagenotfound-title">Erreur 404</h1>
                     <p className="pagenotfound-text">Page non trouvée !</p>
-                    <p>La page que vous avez demandé n'existe pas ou a été supprimé !</p>
+                    <p className="pagenotfound-desc">La page que vous avez demandé n'existe pas ou a été supprimé !</p>
                     <Link className="pagenotfound-button" to={'/'}>Retour a l'accueil</Link>
                     <p className="pagenotfound-debug">Debug : {error.statusText || error.message}</p>
                 </div>
