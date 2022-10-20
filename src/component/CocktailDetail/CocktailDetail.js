@@ -11,6 +11,7 @@ export default function CocktailDetail () {
     const [items, setItems] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [ingredient, setIngredient] = useState([]);
+    const [measure, setMeasure] = useState([]);
 
     const cocktail = useParams();
     const baseUrl = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=' + cocktail.id;
@@ -41,8 +42,20 @@ export default function CocktailDetail () {
             }
         }
 
+        const setCocktailMeasure = () => {
+            setMeasure([]);
+            for(let i = 1; i < 15; i++) {
+                if(items[0]["strMeasure"+i] !== null){
+                    setMeasure(arr => [...arr, items[0]["strMeasure"+i]]);
+                }else{
+                    break;
+                }
+            }
+        }
+
         if(!isLoading) {
             setCocktailIngredient();
+            setCocktailMeasure();
         }
     }, [isLoading])
 
@@ -57,8 +70,8 @@ export default function CocktailDetail () {
                         <h1 className='cocktaildetail-title'>{items[0].strDrink}</h1>
                         <p className='cocktaildetail-undertitle'>Ingrédients :</p>
                         <ul className='cocktaildetail-ingredient'>
-                            {ingredient.map(item => (
-                                <li>{item}</li>
+                            {ingredient.map((item, index) => (
+                                <li><span className='cocktaildetail-measure'>{measure[index]}</span> &#62; {item}</li>
                             ))}
                         </ul>
                         <hr className='cocktaildetail-line'/>
