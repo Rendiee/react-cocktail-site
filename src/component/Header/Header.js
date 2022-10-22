@@ -17,7 +17,7 @@ export default function Header () {
     }
 
     return (
-        <header id='accueil'>
+        <header id='accueil top'>
             <nav className='navbar'>
                 <img className='header-logo' src={logo} alt='logo cocktail party'/>
                 <ul className={isActive ? "nav-menu mobile-menu" : "nav-menu"}>

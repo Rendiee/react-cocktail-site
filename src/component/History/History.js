@@ -24,7 +24,7 @@ class History extends React.Component {
                         cocktails aux États-Unis. La profession de barman était l’une des
                         plus rémunératrices.
                     </p>
-                    <a href="https://www.amazon.fr/Jerry-Thomas-Bartenders-Guide-Companion/dp/1440453268" target="_blank" rel='noreferrer'><button className="history-book">Acheter</button></a>
+                    <a href="https://www.amazon.fr/Jerry-Thomas-Bartenders-Guide-Companion/dp/1440453268" target="_blank" rel='noreferrer'><button className="button-cta">Acheter</button></a>
                 </div>
             </section>
         )

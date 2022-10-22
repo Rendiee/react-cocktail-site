@@ -10,7 +10,7 @@ export default function Footer () {
         <footer>
             <div className='footer-upper'>
                 <img className='footer-logo' src={logo} alt='logo of the website' />
-                <p className='footer-text'>Site internet crée dans le but de s’entraîner avec ReactJS pour la syntaxe en utilisant une API de cocktail.</p>
+                <p className='footer-text'>Site internet crée dans le but de s’entraîner avec ReactJS pour la syntaxe en utilisant une API de cocktail.<br />- https://www.thecocktaildb.com/api.php</p>
                 <ul className='footer-menu'>
                     <li><a href='#accueil'>Accueil</a></li>
                     <li><a href='#histoire'>Histoire</a></li>

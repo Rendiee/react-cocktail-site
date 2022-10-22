@@ -14,6 +14,7 @@ const router = createBrowserRouter([
     {
         path: "cocktail/:id",
         element: <CocktailDetail />,
+        errorElement: <PageNotFound />
     }
 ])
 

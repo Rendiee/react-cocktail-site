@@ -24,14 +24,7 @@ export default function CocktailCard (props) {
     }
 
     return(
-        <div className="cocktail-card" key={props.key} style={{
-            animationDuration: '0.4s',
-            animationDelay : `${props.animationDelay}`,
-            animationIterationCount: 1,
-            animationName: 'card-animation',
-            animationTimingFunction: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
-            animationFillMode: 'both'
-        }}>
+        <div className="cocktail-card">
             <img className="cocktail-card-img" src={props.img} alt='cocktail img' />
             <p className="cocktail-card-title">{props.title}</p>
             <div className="cocktail-card-info">

@@ -43,10 +43,10 @@ export default function Cocktail () {
             <div className="cocktail-list">
                 {items.slice(0, cocktailShow).map(item => (
                     <CocktailCard
-                        animationDelay={'0.05s'}
+                        key={item.idDrink}
+                        id={item.idDrink}
                         title={item.strDrink}
                         img={item.strDrinkThumb+'/preview'}
-                        id={item.idDrink}
                     />
                 ))}
             </div>
@@ -56,7 +56,7 @@ export default function Cocktail () {
     const buttonLoadMore = () => {
         return (
             <div className="cocktail-load">
-                <button className="cocktail-more" onClick={handleMoreCocktail}>Charger plus</button>
+                <button className="button-cta" onClick={handleMoreCocktail}>Charger plus</button>
             </div>
         )
     }

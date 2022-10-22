@@ -8,6 +8,8 @@
 .hero-left {
     margin-left: 4vw;
     width: 50%;
+    -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .hero-title{
@@ -23,18 +25,6 @@
 .hero-red-text {
     color: #da5c5c;
     font-weight: 600;
-}
-
-.hero-cta {
-    all: unset;
-    background-color: #960000;
-    color: white;
-    border-radius: 8px;
-    padding: 0.5rem 2rem;
-    font-weight: 500;
-    font-size: 1.1rem;
-    margin-top: 4.5vh;
-    cursor: pointer;
 }
 
 .hero-image {
@@ -56,8 +46,9 @@
     -webkit-transform: translateX(0);
             transform: translateX(0);
     opacity: 1;
+    }
 }
-}
+
 @keyframes slide-in-right {
 0% {
     -webkit-transform: translateX(1000px);
@@ -68,8 +59,36 @@
     -webkit-transform: translateX(0);
             transform: translateX(0);
     opacity: 1;
+    }
+}
+
+@-webkit-keyframes slide-in-left {
+    0% {
+      -webkit-transform: translateX(-1000px);
+              transform: translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+@keyframes slide-in-left {
+0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+}
+100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
 }
 }
+  
+
 
 .hero-rectangle {
     position: absolute;

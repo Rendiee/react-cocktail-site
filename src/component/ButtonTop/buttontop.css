@@ -1,0 +1,11 @@
+.button-top {
+    background-color: #960000;
+    position: fixed;
+    border-radius: 50%;
+    bottom: 20px;
+    right: 20px;
+}
+
+svg {
+    display: block;
+}
