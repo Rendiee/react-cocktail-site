@@ -31,7 +31,7 @@ export default function CocktailCard (props) {
                 <p className="cocktail-card-small">Sans alcool</p>
                 <p>{generateRandomStarsNote()}</p>
             </div>
-            <Link className="cocktail-card-button" to={'cocktail/' + props.id}>Découvrir</Link>
+            <Link className="cocktail-card-button" to={'/cocktail/' + props.id}>Découvrir</Link>
         </div>
     )
 }

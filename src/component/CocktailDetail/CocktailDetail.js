@@ -5,6 +5,7 @@ import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import Loading from '../Loading/Loading';
 import './cocktaildetail.css';
+import { Link } from 'react-router-dom';
 
 export default function CocktailDetail () {
 
@@ -78,6 +79,9 @@ export default function CocktailDetail () {
                         <p className='cocktaildetail-undertitle'>Instruction :</p>
                         <p>{items[0].strInstructions}</p>
                     </div>
+                </div>
+                <div className='backhome'>
+                    <Link className="button-back" to={'/'}>Retour a l'accueil</Link>
                 </div>
             </section>
         )

@@ -70,6 +70,24 @@
     text-align: center;
 }
 
+.backhome {
+    display: flex;
+    height: 4rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.button-back {
+    all: unset;
+    padding: 0.5rem 2rem;
+    background-color: #960000;
+    color: white;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 870px) {
     
     .cocktaildetail-container {
