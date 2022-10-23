@@ -20,8 +20,8 @@ export default function Footer () {
             </div>
             <hr className='footer-bar'/>
             <div className='footer-icon-section'>
-                <a href='https://github.com/Rendiee/react-cocktail-site'><img className='footer-icon' src={github} alt='github logo'/></a>
-                <a href='https://www.thecocktaildb.com/api.php'><img className='footer-icon' src={cocktailapi} alt='cocktail api logo' /></a>
+                <a href='https://github.com/Rendiee/react-cocktail-site' target="_blank" rel='noreferrer'><img className='footer-icon' src={github} alt='github logo'/></a>
+                <a href='https://www.thecocktaildb.com/api.php' target="_blank" rel='noreferrer'><img className='footer-icon' src={cocktailapi} alt='cocktail api logo' /></a>
             </div>
         </footer>
     )
