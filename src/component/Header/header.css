@@ -76,9 +76,11 @@ header {
         display: block;
         position: absolute;
         right: 5%;
+        z-index: 1;
     }
 
     .mobile-menu {
         margin-left: 0;
+        z-index: 1;
     }
 }

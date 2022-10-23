@@ -10,12 +10,12 @@ import ButtonTop from "../ButtonTop/ButtonTop";
 export default function MainPage() {
     return (
         <>
-            <ButtonTop />
             <Header/>
             <Hero />
             <History />
             <Cocktail />
             <Footer />
+            <ButtonTop />
         </>
     )
 }

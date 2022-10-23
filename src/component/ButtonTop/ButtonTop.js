@@ -2,7 +2,7 @@ import './buttontop.css';
 
 export default function ButtonTop() {
     return (
-        <div className="button-top">
+        <button className='button-top'>
             <a href="#top">
                 <svg width="35px" height="35px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <g id="_24x24_On_Light_Arrow-Top" data-name="24x24/On Light/Arrow-Top" transform="translate(24) rotate(90)">
@@ -11,6 +11,6 @@ export default function ButtonTop() {
                     </g>
                 </svg>
             </a>
-        </div>
+        </button>
     )
 }
